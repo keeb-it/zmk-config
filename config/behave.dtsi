@@ -3,8 +3,6 @@
 #define XXX &none
 #define ___ &trans
 #define QUICK_TAP_MS 175
-// #undef COMBO_TERM
-// #define COMBO_TERM 50
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define BLE_C(n)    &bt BT_SEL n             // connect to given bluetooth profile
 #define BLE_D(n)    &bt BT_DISC n            // disconnect from given bluetooth profile
