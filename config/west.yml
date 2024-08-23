@@ -14,9 +14,18 @@ manifest:
       url-base: https://github.com/keeb-it
   projects:
     - name: zmk
-      remote: urob
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
+    # Zephyr with a path other than `zephyr` (as in `going-modular`).
+    # - name: zmk
+    #   remote: urob
+    #   revision: going-modular
+    #   path: .
+    #   import:
+    #     file: app/west.yml
+    #     path-prefix: zmk
     # Note: The following imports only shields definition files
     - name: zmk-keyboards
       remote: keeb-it
@@ -27,8 +36,17 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
-    - name: cirque-input-module
-      remote: petejohanson
+      path: modules/helpers
+    - name: zmk-auto-layer
+      remote: urob
       revision: main
+      path: modules/auto-layer
+    - name: zmk-tri-state
+      remote: urob
+      revision: main
+      path: modules/tri-state
+    # - name: cirque-input-module
+    #   remote: petejohanson
+    #   revision: main
   self:
     path: config
