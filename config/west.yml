@@ -45,8 +45,8 @@ manifest:
       remote: urob
       revision: main
       path: modules/tri-state
-    - name: cirque-input-module
-      remote: petejohanson
-      revision: main
+    # - name: cirque-input-module
+    #   remote: petejohanson
+    #   revision: main
   self:
     path: config
