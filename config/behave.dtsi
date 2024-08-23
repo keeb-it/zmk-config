@@ -1,4 +1,5 @@
 /* aliases & config options */
+#include <behaviors/num_word.dtsi>
 
 #define XXX &none
 #define ___ &trans
@@ -38,12 +39,8 @@ ZMK_HOLD_TAP(smart_num,
 )
 ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
-&num_word {  // num-word, requires PR #1451
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
 
 /* Custom behaviors */
 
