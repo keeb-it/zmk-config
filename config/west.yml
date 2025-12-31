@@ -39,7 +39,7 @@ manifest:
       path: modules/helpers
     - name: zmk-auto-layer
       remote: urob
-      revision: main
+      revision: next
       path: modules/auto-layer
     - name: zmk-tri-state
       remote: urob
