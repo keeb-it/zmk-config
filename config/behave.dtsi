@@ -5,8 +5,12 @@
 #define ___ &trans
 #define QUICK_TAP_MS 175
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
+
+// Don't include these in case of wired board
+#ifndef WIRED_BOARD
 #define BLE_C(n)    &bt BT_SEL n             // connect to given bluetooth profile
 #define BLE_D(n)    &bt BT_DISC n            // disconnect from given bluetooth profile
+#endif
 
 /* Homerow mods */
 
