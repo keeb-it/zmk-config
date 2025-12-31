@@ -22,6 +22,12 @@
 #define NAV 1
 #define MOUSE 2
 
+// Extra thumb keys used in HRM (not-available in coral)
+#define LH4
+#define LH5
+#define RH4
+#define RH5
+
 // tap: media next | double-tap: media previous
 ZMK_TAP_DANCE(l_rot,
     tapping-term-ms = <250>;
