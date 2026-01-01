@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define LILY58_STANDARD_LABELS
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/lily58.h"
 #include "zmk-helpers/unicode-chars/currency.dtsi"
