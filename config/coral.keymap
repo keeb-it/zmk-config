@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define WIRED_BOARD
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -17,17 +15,9 @@
 #define DEF 0
 #define NAV 1
 #define MSE 2
-#define NUM 9 // Placeholder layer (to fix the build)
-
-// Extra thumb keys used in HRM (not-available in coral)
-#define LH4
-#define LH5
-#define RH4
-#define RH5
 
 #include "mouse.dtsi"
-#include "combos.dtsi"
-#include "behave.dtsi"
+#include "base.dtsi"
 
 // tap: media next | double-tap: media previous
 ZMK_TAP_DANCE(l_rot,
