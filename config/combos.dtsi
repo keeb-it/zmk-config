@@ -25,16 +25,16 @@
 */
 
 
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
 ZMK_COMBO(capsw, &caps_word, LM0 RM0, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(bootl, &bootloader, LB1 LB0 RB0 RB1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 // ZMK_COMBO(reset, &sys_reset, LT5 LT4 RT4 RT5)
 
-
-// #define COMBO_TERM_FAST 18
-// #define COMBO_TERM_SLOW 30
-
-// #define COMBO_IDLE_FAST 150
-// #define COMBO_IDLE_SLOW 50
 
 // /* Horizontal combos - left hand */
 // ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
