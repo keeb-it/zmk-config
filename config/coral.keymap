@@ -20,7 +20,7 @@
 #include "base.dtsi"
 
 // combo: RC(0,0) + RC(0,1) -> Studio Unlock
-ZMK_COMBO(studio, &studio_unlock, LN5 LN4, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(unlock_studio, &studio_unlock, LN5 LN4, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // tap: media next | double-tap: media previous
 ZMK_TAP_DANCE(l_rot,
