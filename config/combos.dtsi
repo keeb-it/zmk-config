@@ -33,7 +33,7 @@
 
 ZMK_COMBO(capsw, &caps_word, LM0 RM0, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(bootl, &bootloader, LB1 LB0 RB0 RB1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-// ZMK_COMBO(reset, &sys_reset, LT5 LT4 RT4 RT5)
+ZMK_COMBO(reset, &sys_reset, LT1 LT0 RT0 RT1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 // /* Horizontal combos - left hand */
