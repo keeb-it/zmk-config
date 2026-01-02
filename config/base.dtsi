@@ -1,13 +1,20 @@
-/* aliases & config options */
-#include <behaviors/num_word.dtsi>
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires zmk-auto-layer module.
+#include <behaviors/unicode.dtsi> // Requires zmk-unicode module.
+#include <zmk-helpers/helper.h> // Requires zmk-helpers module.
+#include <dt-bindings/zmk/keys.h>
 
-#include "leader.dtsi"
-#include "combos.dtsi"
+#ifdef CONFIG_WIRELESS
+  #include <dt-bindings/zmk/bt.h>
+  #include <dt-bindings/zmk/outputs.h>
+#endif
 
 #define XXX             &none
 #define ___             &trans
 #define CANCEL          &kp K_CANCEL        // cancel caps-word, num-word and smart-mouse
 #define PASTE           &kp LS(INS)
+
+#define UC_INR &uc UC_CURR_INDIAN_RUPEE
 
 // Only include these for wireless board
 #ifdef CONFIG_WIRELESS
@@ -52,6 +59,12 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+
+/* Combos, leader key sequences, mouse emulation */
+
+#include "combos.dtsi" // Must be sourced after HRM-combo hack.
+#include "leader.dtsi"
+#include "mouse.dtsi"
 
 /* Caps-word, num-word and smart-mouse */
 
@@ -107,4 +120,4 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
               tapping-term-ms = <200>;)
 
 // Sticky shift + leader.
-// ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
+ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)

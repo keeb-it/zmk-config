@@ -1,4 +1,7 @@
 manifest:
+  defaults:
+    revision: main # Pin everything to v0.3
+
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -12,39 +15,34 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: keeb-it
       url-base: https://github.com/keeb-it
+
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
       import: app/west.yml
-    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
-    # Zephyr with a path other than `zephyr` (as in `going-modular`).
-    # - name: zmk
-    #   remote: urob
-    #   revision: going-modular
-    #   path: .
-    #   import:
-    #     file: app/west.yml
-    #     path-prefix: zmk
-    # Note: The following imports only shields definition files
     - name: zmk-keyboards
       remote: keeb-it
-      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: main
-    - name: zmk-helpers
+    - name: zmk-adaptive-key
+      path: modules/zmk/adaptive-key
       remote: urob
-      revision: main
-      path: modules/helpers
     - name: zmk-auto-layer
+      path: modules/zmk/auto-layer
       remote: urob
       revision: next
-      path: modules/auto-layer
-    - name: zmk-tri-state
+    - name: zmk-helpers
+      path: modules/zmk/helpers
       remote: urob
-      revision: main
-      path: modules/tri-state
+    - name: zmk-leader-key
+      path: modules/zmk/leader-key
+      remote: urob
+    - name: zmk-tri-state
+      path: modules/zmk/tri-state
+      remote: urob
+    - name: zmk-unicode
+      path: modules/zmk/unicode
+      remote: urob
     # - name: cirque-input-module
     #   remote: petejohanson
     #   revision: main
