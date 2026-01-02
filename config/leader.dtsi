@@ -14,6 +14,12 @@
         }; \
     };
 
+/* Currency */
+ZMK_LEADER_SEQUENCE(cr_inr,     UC_INR,               C I)  // ä
+ZMK_LEADER_SEQUENCE(cr_inr,     &uc UC_CURR_DOLLAR,   C D)  // ä
+ZMK_LEADER_SEQUENCE(cr_inr,     &uc UC_CURR_EURO,     C E)  // ä
+ZMK_LEADER_SEQUENCE(cr_inr,     &uc UC_CURR_CENT,     C C)  // ä
+
 /* German umlauts */
 ZMK_LEADER_SEQUENCE(de_ae,      &uc UC_DE_AE,         A)  // ä
 ZMK_LEADER_SEQUENCE(de_oe,      &uc UC_DE_OE,         O)  // ö
