@@ -31,6 +31,10 @@ ZMK_TAP_DANCE(r_rot,
     bindings = <&kp C_PP>, <&kp C_MUTE>;
 )
 
+&sensors {
+    triggers-per-rotation = <40>;
+};
+
 /* Keymap */
 
 ZMK_LAYER(base,
